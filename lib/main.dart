@@ -3,19 +3,21 @@ import 'login.dart';
 import 'home.dart';
 import 'forgetpassword.dart';
 import 'signup.dart';
+import 'splash.dart'; // Import the Splash Page
 
 void main() {
-  runApp(SnapchatApp());
+  runApp(FlipkartApp());
 }
 
-class SnapchatApp extends StatelessWidget {
+class FlipkartApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Snapchat Clone',
-      theme: ThemeData(primarySwatch: Colors.yellow),
-      initialRoute: '/login', // Set the initial route
+      title: 'Flipkart Clone',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      initialRoute: '/', // Set the initial route to the splash screen
       routes: {
+        '/': (context) => SplashPage(), // Splash screen as the first route
         '/login': (context) => LoginPage(),
         '/home': (context) => HomePage(),
         '/forgot-password': (context) => ForgotPasswordPage(),
